@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 1000px;
+  background-image: url("https://unblast.com/wp-content/uploads/2018/12/Wood-Pattern-2.jpg");
+  background-position: center center;
+}
+
+.paper {
+  background-image: url("https://i.pinimg.com/736x/05/53/d9/0553d9d2ae7e576b66d34a1e0df8eab6.jpg");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  /*  min-width: 800px; */
+
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0%, 70% 5%, 90% 15%, 100% 40%, 95% 65%, 85% 85%, 
+    60% 100%, 40% 95%, 15% 85%, 5% 60%, 0% 30%, 10% 10%
+  );
+}
+
+.paper.image {
+  padding: 10px;
+}
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 200px;
+  width: 100%;
+  user-select: none;
+}
+
+p {
+  font-family: "Zeyada";
+  font-size: 50px;
+  color: rgb(0, 0, 100);
+  opacity: 0.75;
+  user-select: none;
+
+  /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
+}
+
+.rough-1 {
+  clip-path: polygon(0% 0%, 80% 10%, 100% 50%, 90% 100%, 20% 80%, 0% 100%);
+}
+
+.rough-2 {
+  clip-path: polygon(10% 10%, 90% 0%, 100% 50%, 80% 90%, 20% 100%, 0% 50%);
+}
+
+.rough-3 {
+  clip-path: polygon(5% 15%, 95% 5%, 85% 95%, 10% 80%, 30% 50%);
+}
+
+.rough-4 {
+  clip-path: polygon(0% 20%, 60% 0%, 100% 30%, 90% 80%, 40% 100%, 10% 70%);
+}
+
+.rough-5 {
+  clip-path: polygon(10% 0%, 90% 20%, 80% 80%, 30% 100%, 0% 50%);
+}
+
+.rough-6 {
+  clip-path: polygon(0% 0%, 75% 5%, 100% 40%, 90% 100%, 30% 90%, 10% 60%);
+}
