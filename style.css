@@ -59,13 +59,14 @@ img {
   user-select: none;
 }
 
-@font-face {
-  font-family: "myFirstFont";
-  src: url(\nodebox\GrapeNuts-Regular.ttf);
+p {
+  @font-face {
+    font-family: "myFirstFont";
+    src: url(\nodebox\GrapeNuts-Regular.ttf);
 
-  /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
+    /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
+  }
 }
-
 .rough-1 {
   clip-path: polygon(0% 0%, 80% 10%, 100% 50%, 90% 100%, 20% 80%, 0% 100%);
 }
