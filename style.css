@@ -31,8 +31,18 @@ body {
   padding: 0;
   border-radius: 50%;
   clip-path: polygon(
-    50% 0%, 70% 5%, 90% 15%, 100% 40%, 95% 65%, 85% 85%, 
-    60% 100%, 40% 95%, 15% 85%, 5% 60%, 0% 30%, 10% 10%
+    50% 0%,
+    70% 5%,
+    90% 15%,
+    100% 40%,
+    95% 65%,
+    85% 85%,
+    60% 100%,
+    40% 95%,
+    15% 85%,
+    5% 60%,
+    0% 30%,
+    10% 10%
   );
 }
 
@@ -49,12 +59,9 @@ img {
   user-select: none;
 }
 
-p {
-  font-family: "Zeyada";
-  font-size: 50px;
-  color: rgb(0, 0, 100);
-  opacity: 0.75;
-  user-select: none;
+@font-face {
+  font-family: "myFirstFont";
+  src: url(\nodebox\GrapeNuts-Regular.ttf);
 
   /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
 }
