@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
 
+@font-face {
+  font-family: "myFirstFont";
+  src: url(./GrapeNuts-Regular.ttf);
+
+  /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -60,13 +67,9 @@ img {
 }
 
 p {
-  @font-face {
-    font-family: "myFirstFont";
-    src: url(\nodebox\GrapeNuts-Regular.ttf);
-
-    /* filter: drop-shadow(-10px 0px 5px rgba(0, 0, 0, 0.5)); */
-  }
+  font-family: "myFirstFont";
 }
+
 .rough-1 {
   clip-path: polygon(0% 0%, 80% 10%, 100% 50%, 90% 100%, 20% 80%, 0% 100%);
 }
