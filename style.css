@@ -6,6 +6,7 @@
 }
 
 body {
+  margin: 0;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -32,11 +33,20 @@ body {
   justify-content: center;
 }
 
-.paper.heart {
-  position: relative;
+.heart {
   width: 200px;
   height: 200px;
+}
+
+.heart:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   padding: 0;
+  content: '';
   border-radius: 50%;
   clip-path: polygon(50% 0%,
       70% 5%,
