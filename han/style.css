@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+@font-face {
+  font-family: "myFirstFont";
+  src: url(./GrapeNuts-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-size: 1000px;
+  background-image: url("https://unblast.com/wp-content/uploads/2018/12/Wood-Pattern-2.jpg");
+  background-position: center center;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.first {
+  background-image: url("https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/3/7/thiep-10-16781604658791938966657.jpg");
+  background-size: 500px;
+  cursor: pointer;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+}
+
+.paper {
+  cursor: pointer;
+  max-width: 350px;
+  transform: rotateZ(-3deg);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.heart {
+  width: 200px;
+  height: 200px;
+}
+
+.heart:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  content: "";
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0%,
+    70% 5%,
+    90% 15%,
+    100% 40%,
+    95% 65%,
+    85% 85%,
+    60% 100%,
+    40% 95%,
+    15% 85%,
+    5% 60%,
+    0% 30%,
+    10% 10%
+  );
+}
+
+.image {
+  /* padding: 10px; */
+  border: 11px solid rgb(250, 250, 250);
+  position: absolute;
+}
+
+img {
+  max-height: 250px;
+  max-width: 300px;
+  user-select: none;
+}
+
+.abc {
+  font-family: initial;
+}
+p {
+  font-family: "myFirstFont";
+  font-size: 50px;
+  /* text-align: center; */
+}
+
+.drop-shadow {
+  filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
+}
+
+.rough-1:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(
+    0% 100%,
+    10% 95%,
+    20% 97%,
+    30% 92%,
+    40% 98%,
+    50% 94%,
+    60% 99%,
+    70% 93%,
+    80% 96%,
+    90% 95%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.rough-2:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(
+    0% 95%,
+    10% 99%,
+    20% 93%,
+    30% 97%,
+    40% 86%,
+    50% 93%,
+    60% 89%,
+    70% 93%,
+    80% 90%,
+    90% 95%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+}
+
+.rough-3:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(5% 15%, 95% 5%, 85% 95%, 10% 80%, 30% 50%);
+}
+
+.rough-4:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(0% 20%, 60% 0%, 100% 30%, 90% 80%, 40% 100%, 10% 70%);
+}
+
+.rough-5:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(10% 0%, 90% 20%, 80% 80%, 30% 100%, 0% 50%);
+}
+
+.rough-6:before {
+  background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
+  background-size: 750px;
+  background-position: center center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  clip-path: polygon(0% 0%, 75% 5%, 100% 40%, 90% 100%, 30% 90%, 10% 60%);
+}
