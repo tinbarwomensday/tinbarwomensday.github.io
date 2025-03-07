@@ -30,9 +30,9 @@ body {
   background-image: url("https://t4.ftcdn.net/jpg/05/16/89/89/360_F_516898948_ce9itxsgMIwptXh391QOZO5fIItX5vs0.jpg");
   background-size: 750px;
   background-position: center center;
-  padding: 20px 100px;
+  padding: 10px 40px;
   /*  min-width: 800px; */
-
+  max-width: 400px;
   transform: rotateZ(-5deg);
   box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
 
@@ -45,31 +45,31 @@ body {
   height: 200px;
   padding: 0;
   border-radius: 50%;
-  clip-path: polygon(50% 0%,
-      70% 5%,
-      90% 15%,
-      100% 40%,
-      95% 65%,
-      85% 85%,
-      60% 100%,
-      40% 95%,
-      15% 85%,
-      5% 60%,
-      0% 30%,
-      10% 10%);
+  clip-path: polygon(
+    50% 0%,
+    70% 5%,
+    90% 15%,
+    100% 40%,
+    95% 65%,
+    85% 85%,
+    60% 100%,
+    40% 95%,
+    15% 85%,
+    5% 60%,
+    0% 30%,
+    10% 10%
+  );
 }
-
-
 
 .image {
   /* padding: 10px; */
-  border: 10px solid white;
+  border: 10px solid rgb(250, 250, 250);
   position: absolute;
 }
 
 img {
-  max-height: 200px;
-  width: 100%;
+  max-height: 250px;
+  max-width: 250px;
   user-select: none;
 }
 
@@ -79,36 +79,44 @@ p {
   /* text-align: center; */
 }
 
+.drop-shadow {
+  filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
+}
+
 .rough-1 {
-  clip-path: polygon(0% 100%,
-      10% 95%,
-      20% 97%,
-      30% 92%,
-      40% 98%,
-      50% 94%,
-      60% 99%,
-      70% 93%,
-      80% 96%,
-      90% 95%,
-      100% 100%,
-      100% 0%,
-      0% 0%);
+  clip-path: polygon(
+    0% 100%,
+    10% 95%,
+    20% 97%,
+    30% 92%,
+    40% 98%,
+    50% 94%,
+    60% 99%,
+    70% 93%,
+    80% 96%,
+    90% 95%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
 }
 
 .rough-2 {
-  clip-path: polygon(0% 95%,
-      10% 99%,
-      20% 93%,
-      30% 97%,
-      40% 86%,
-      50% 93%,
-      60% 89%,
-      70% 93%,
-      80% 90%,
-      90% 95%,
-      100% 100%,
-      100% 0%,
-      0% 0%);
+  clip-path: polygon(
+    0% 95%,
+    10% 99%,
+    20% 93%,
+    30% 97%,
+    40% 86%,
+    50% 93%,
+    60% 89%,
+    70% 93%,
+    80% 90%,
+    90% 95%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
 }
 
 .rough-3 {
