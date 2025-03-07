@@ -19,7 +19,7 @@
     rotating = false;
 
     init(paper) {
-      paper.addEventListener('touchmove', (e) => {
+      paper.addEventListener("touchmove", (e) => {
         e.preventDefault();
         if (!this.rotating) {
           this.touchMoveX = e.touches[0].clientX;
@@ -36,7 +36,7 @@
         const dirNormalizedY = dirY / dirLength;
 
         const angle = Math.atan2(dirNormalizedY, dirNormalizedX);
-        let degrees = 180 * angle / Math.PI;
+        let degrees = (180 * angle) / Math.PI;
         degrees = (360 + Math.round(degrees)) % 360;
         if (this.rotating) {
           this.rotation = degrees;
@@ -52,9 +52,9 @@
 
           paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
         }
-      })
+      });
 
-      paper.addEventListener('touchstart', (e) => {
+      paper.addEventListener("touchstart", (e) => {
         if (this.holdingPaper) return;
         this.holdingPaper = true;
 
@@ -66,27 +66,30 @@
         this.prevTouchX = this.touchStartX;
         this.prevTouchY = this.touchStartY;
       });
-      paper.addEventListener('touchend', () => {
+      paper.addEventListener("touchend", () => {
         this.holdingPaper = false;
         this.rotating = false;
       });
 
       // For two-finger rotation on touch screens
-      paper.addEventListener('gesturestart', (e) => {
+      paper.addEventListener("gesturestart", (e) => {
         e.preventDefault();
         this.rotating = true;
       });
-      paper.addEventListener('gestureend', () => {
+      paper.addEventListener("gestureend", () => {
         this.rotating = false;
       });
     }
   }
 
-  const papers = [ ...document.querySelectorAll('.paper'), ...document.querySelectorAll(".image") ];
+  const papers = [
+    ...document.querySelectorAll(".paper"),
+    ...document.querySelectorAll(".image"),
+    ...document.querySelectorAll(".first"),
+  ];
 
-  papers.forEach(paper => {
+  papers.forEach((paper) => {
     const p = new Paper();
     p.init(paper);
   });
-
 }
