@@ -177,7 +177,48 @@ $$Int(\frac{tanh(A - B)tanh(C - D)tanh(E - F) + 2}{2})$$
 
 Since all equations above return 1 and 0, we can get the reversed condition simply by using 1 substracted by the result. For example, here is an equation that returns 1 if A is different from B and 0 if A is equal to B:
 
-1 - $$Int(1 - \lvert tanh(A - B) \rvert)$$
+$$1 - Int(1 - \lvert tanh(A - B) \rvert)$$
 
-**Applications**
+#### Applications
 
+In this section, let's use what we have learnt to solve some problems relating to condtions.
+
+**Prime number check**
+
+With n being the number to verify, we loop from 2 to the square root of n, and if n is divisable by any number in the loop, n is not a prime.
+
+A number is divisable by another number only if the quotient is an integer, so to check divisability, we just have to check if the rounded quotient is equal to the quotient:
+
+$$1 - Int(1 - \lvert tanh(Int(\frac{A}{x}) - \frac{A}{x}) \rvert)$$
+
+This equation will return 0 if A is divisable by x, 1 if not.
+
+If we use the production notation, only one multiplier being 0 can make the final product 0 regardless of others. So we can plug in the equation we have come up with above in a product notation and it's complete:
+
+$$\prod\limits_{x=start}^{end} (1 - Int(1 - \lvert tanh(Int(\frac{A}{x}) - \frac{A}{x}) \rvert))$$
+
+This will return 1 if A is a prime, 0 if not.
+
+### II.6. Modify numbers
+
+Let's say we have number 123456, we want to slice from the third digit to the fifth digit (or 345).
+
+First, we remove "12" to get "3456". We realize that 123456 mod 10000 equals to 3456, but there is no built-in way to calculate modulo in Casio ($\div R$ does not give us a result that can be assigned to a variable or usable in sum/product), so we have this formula:
+
+$$123456 - 10000Int(\frac{123456}{10000})$$
+
+Then, we remove "6" to get "345". We know that 3456 / 10 = 345.6, rounded down to 345, so now we have:
+
+$$Int(\frac{123456 - 10000Int(\frac{123456}{10000})}{10})$$
+
+Abstract form with A, B being known lengths, C is the start, D is the end:
+
+$$Int(\frac{A - 10^{B-C+1}Int(\frac{A}{10^{B-C+1}})}{10^{B-D}})$$
+
+Based on that, we also have a formula to substitute a portion with a different number E:
+
+$$A - (A - 10^{B-C+1}Int(\frac{A}{10^{B-C+1}})) + 10^{B-D}E + (A-10^{B-D}Int(\frac{A}{10^{B-D}}))$$
+
+Shortened to:
+
+$$A + 10^{B-D}(10^{D-C+1}Int(\frac{10}{10^{B-C+1}}) + E - Int(\frac{A}{10^{B-D}}))$$
